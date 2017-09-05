@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 2.8.2)
+project(data_test C CXX)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/build)
 
-project(datatesting)
-enable_testing()
+#enable_testing()
+#include(Dart)
 
-include(Dart)
+set (CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 
 # Download and unpack googletest at configure time
 message(${CMAKE_CURRENT_BINARY_DIR})
@@ -25,7 +27,6 @@ if(result)
   message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
 
-
 # Prevent overriding the parent project's compiler/linker
 # settings on Windows
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -42,17 +43,25 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
+# Build library
+#add_subdirectory(${CMAKE_SOURCE_DIR}/libs ${CMAKE_BINARY_DIR}/libs)
+
 # Now simply link against gtest or gtest_main as needed. Eg
 file(GLOB test_src "*.h" "*.cpp")
 add_executable(data_test ${test_src})
+
 target_link_libraries(data_test gtest_main)
+target_link_libraries(data_test libs)
+
+#[[add_custom_command(TARGET data_test
+                 POST_BUILD
+                 COMMAND ${CMAKE_BINARY_DIR}/data_test)
+                  
+add_custom_command(TARGET data_test
+                  POST_BUILD
+                  COMMAND lcov --capture --directory ${CMAKE_BINARY_DIR}/test/CMakeFiles/${PROJECT_NAME}.dir --output-file ${CMAKE_BINARY_DIR}/test/CMakeFiles/${PROJECT_NAME}.dir/coverage.info)
 
 add_custom_command(TARGET data_test
                   POST_BUILD
-                  COMMAND ${CMAKE_BINARY_DIR}/data_test)
-#[[
-add_test(NAME data_test 
-        COMMAND ${CMAKE_BINARY_DIR}/data_test)
-add_test(own_hash.constructor1 
-        ${CMAKE_BINARY_DIR}/data_test)
+                  COMMAND genhtml ${CMAKE_BINARY_DIR}/test/CMakeFiles/${PROJECT_NAME}.dir/coverage.info --output-directory ${CMAKE_BINARY_DIR}/test/CMakeFiles/${PROJECT_NAME}.dir/out)
 ]]

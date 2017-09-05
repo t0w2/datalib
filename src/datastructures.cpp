@@ -1,8 +1,10 @@
 #include "../libs/structures.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-    own_hash<int> test_hash();
+    own_array<int> myarray;
+    myarray.getSize();
+
 
     return 0;
 }

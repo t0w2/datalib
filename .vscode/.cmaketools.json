@@ -13,15 +13,181 @@
         "name": "Debug",
         "projects": [
           {
-            "buildDirectory": "/home/dmitri/workspace/data/build",
-            "name": "datastructures",
-            "sourceDirectory": "/home/dmitri/workspace/data",
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/test",
+            "name": "data_test",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/test",
             "targets": [
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/libs/libstructurelib.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock_main.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/libs",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmock_main.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmock.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest_main.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest_main.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/data_test"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/test",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage  ",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "data_test.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "data_test",
+                "linkLanguageFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage",
+                "linkLibraries": "-rdynamic ../googletest-build/googlemock/gtest/libgtest_main.a ../libs/liblibs.a ../googletest-build/googlemock/gtest/libgtest.a -pthread",
+                "linkerLanguage": "CXX",
+                "name": "data_test",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/test",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/home/dmitri/workspace/datalib/build",
+            "name": "datalib",
+            "sourceDirectory": "/home/dmitri/workspace/datalib",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/libs/liblibs.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/libs",
                 "fileGroups": [
                   {
                     "compileFlags": "-g  ",
@@ -38,502 +204,128 @@
                     ]
                   }
                 ],
-                "fullName": "libstructurelib.a",
+                "fullName": "liblibs.a",
                 "linkerLanguage": "CXX",
-                "name": "structurelib",
-                "sourceDirectory": "/home/dmitri/workspace/data/libs",
+                "name": "libs",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/libs",
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyBuild",
-                      "../build/test/CMakeFiles/NightlyBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyBuild",
-                "name": "NightlyBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyStart",
-                      "../build/test/CMakeFiles/NightlyStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyStart",
-                "name": "NightlyStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyMemoryCheck",
-                      "../build/test/CMakeFiles/NightlyMemoryCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyMemoryCheck",
-                "name": "NightlyMemoryCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyMemCheck",
-                      "../build/test/CMakeFiles/NightlyMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyMemCheck",
-                "name": "NightlyMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalStart",
-                      "../build/test/CMakeFiles/ExperimentalStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalStart",
-                "name": "ExperimentalStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousConfigure",
-                      "../build/test/CMakeFiles/ContinuousConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousConfigure",
-                "name": "ContinuousConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyCoverage",
-                      "../build/test/CMakeFiles/NightlyCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyCoverage",
-                "name": "NightlyCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalUpdate",
-                      "../build/test/CMakeFiles/ExperimentalUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalUpdate",
-                "name": "ExperimentalUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalConfigure",
-                      "../build/test/CMakeFiles/ExperimentalConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalConfigure",
-                "name": "ExperimentalConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousSubmit",
-                      "../build/test/CMakeFiles/ContinuousSubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousSubmit",
-                "name": "ContinuousSubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousCoverage",
-                      "../build/test/CMakeFiles/ContinuousCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousCoverage",
-                "name": "ContinuousCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousTest",
-                      "../build/test/CMakeFiles/ContinuousTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousTest",
-                "name": "ContinuousTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousBuild",
-                      "../build/test/CMakeFiles/ContinuousBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousBuild",
-                "name": "ContinuousBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/data_test"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock_main.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g  ",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
                     "language": "CXX",
                     "sources": [
-                      "data_test.cpp"
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
                     ]
                   }
                 ],
-                "fullName": "data_test",
-                "linkLanguageFlags": "-g",
-                "linkLibraries": "-rdynamic ../googletest-build/googlemock/gtest/libgtest_main.a ../googletest-build/googlemock/gtest/libgtest.a -lpthread",
+                "fullName": "libgmock_main.a",
                 "linkerLanguage": "CXX",
-                "name": "data_test",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousMemCheck",
-                      "../build/test/CMakeFiles/ContinuousMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousMemCheck",
-                "name": "ContinuousMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Nightly",
-                      "../build/test/CMakeFiles/Nightly.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Nightly",
-                "name": "Nightly",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyTest",
-                      "../build/test/CMakeFiles/NightlyTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyTest",
-                "name": "NightlyTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyUpdate",
-                      "../build/test/CMakeFiles/NightlyUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyUpdate",
-                "name": "NightlyUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Continuous",
-                      "../build/test/CMakeFiles/Continuous.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Continuous",
-                "name": "Continuous",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalCoverage",
-                      "../build/test/CMakeFiles/ExperimentalCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalCoverage",
-                "name": "ExperimentalCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalBuild",
-                      "../build/test/CMakeFiles/ExperimentalBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalBuild",
-                "name": "ExperimentalBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyConfigure",
-                      "../build/test/CMakeFiles/NightlyConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyConfigure",
-                "name": "NightlyConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalTest",
-                      "../build/test/CMakeFiles/ExperimentalTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalTest",
-                "name": "ExperimentalTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalMemCheck",
-                      "../build/test/CMakeFiles/ExperimentalMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalMemCheck",
-                "name": "ExperimentalMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Experimental",
-                      "../build/test/CMakeFiles/Experimental.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Experimental",
-                "name": "Experimental",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlySubmit",
-                      "../build/test/CMakeFiles/NightlySubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlySubmit",
-                "name": "NightlySubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalSubmit",
-                      "../build/test/CMakeFiles/ExperimentalSubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalSubmit",
-                "name": "ExperimentalSubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousStart",
-                      "../build/test/CMakeFiles/ContinuousStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousStart",
-                "name": "ContinuousStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousUpdate",
-                      "../build/test/CMakeFiles/ContinuousUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousUpdate",
-                "name": "ContinuousUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
+                "name": "gmock_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
               },
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmock.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest_main.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest_main.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
@@ -546,17 +338,17 @@
                 "fullName": "libgtest.a",
                 "linkerLanguage": "CXX",
                 "name": "gtest",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
                 "type": "STATIC_LIBRARY"
               },
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/datastructures"
+                  "/home/dmitri/workspace/datalib/build/datastruct"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/src",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/src",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g  ",
+                    "compileFlags": "-Wall -fprofile-arcs -ftest-coverage  ",
                     "isGenerated": false,
                     "language": "CXX",
                     "sources": [
@@ -564,342 +356,25 @@
                     ]
                   }
                 ],
-                "fullName": "datastructures",
-                "linkLanguageFlags": "-g",
-                "linkLibraries": "-rdynamic",
+                "fullName": "datastruct",
+                "linkLanguageFlags": "-Wall -fprofile-arcs -ftest-coverage",
+                "linkLibraries": "-rdynamic ../libs/liblibs.a",
                 "linkerLanguage": "CXX",
-                "name": "datastructures",
-                "sourceDirectory": "/home/dmitri/workspace/data/src",
+                "name": "datastruct",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/src",
                 "type": "EXECUTABLE"
               },
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock.a"
+                  "/home/dmitri/workspace/datalib/build/data_test"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/test",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage  ",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "/home/dmitri/workspace/data/build/test",
-            "name": "datatesting",
-            "sourceDirectory": "/home/dmitri/workspace/data/test",
-            "targets": [
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyBuild",
-                      "../build/test/CMakeFiles/NightlyBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyBuild",
-                "name": "NightlyBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyStart",
-                      "../build/test/CMakeFiles/NightlyStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyStart",
-                "name": "NightlyStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyMemoryCheck",
-                      "../build/test/CMakeFiles/NightlyMemoryCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyMemoryCheck",
-                "name": "NightlyMemoryCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyMemCheck",
-                      "../build/test/CMakeFiles/NightlyMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyMemCheck",
-                "name": "NightlyMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalStart",
-                      "../build/test/CMakeFiles/ExperimentalStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalStart",
-                "name": "ExperimentalStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousConfigure",
-                      "../build/test/CMakeFiles/ContinuousConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousConfigure",
-                "name": "ContinuousConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyCoverage",
-                      "../build/test/CMakeFiles/NightlyCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyCoverage",
-                "name": "NightlyCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalUpdate",
-                      "../build/test/CMakeFiles/ExperimentalUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalUpdate",
-                "name": "ExperimentalUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalConfigure",
-                      "../build/test/CMakeFiles/ExperimentalConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalConfigure",
-                "name": "ExperimentalConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousSubmit",
-                      "../build/test/CMakeFiles/ContinuousSubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousSubmit",
-                "name": "ContinuousSubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousCoverage",
-                      "../build/test/CMakeFiles/ContinuousCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousCoverage",
-                "name": "ContinuousCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousTest",
-                      "../build/test/CMakeFiles/ContinuousTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousTest",
-                "name": "ContinuousTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousBuild",
-                      "../build/test/CMakeFiles/ContinuousBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousBuild",
-                "name": "ContinuousBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/data_test"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g  ",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
                       }
                     ],
                     "isGenerated": false,
@@ -910,505 +385,70 @@
                   }
                 ],
                 "fullName": "data_test",
-                "linkLanguageFlags": "-g",
-                "linkLibraries": "-rdynamic ../googletest-build/googlemock/gtest/libgtest_main.a ../googletest-build/googlemock/gtest/libgtest.a -lpthread",
+                "linkLanguageFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage",
+                "linkLibraries": "-rdynamic ../googletest-build/googlemock/gtest/libgtest_main.a ../libs/liblibs.a ../googletest-build/googlemock/gtest/libgtest.a -pthread",
                 "linkerLanguage": "CXX",
                 "name": "data_test",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/test",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousMemCheck",
-                      "../build/test/CMakeFiles/ContinuousMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousMemCheck",
-                "name": "ContinuousMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Nightly",
-                      "../build/test/CMakeFiles/Nightly.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Nightly",
-                "name": "Nightly",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyTest",
-                      "../build/test/CMakeFiles/NightlyTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyTest",
-                "name": "NightlyTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyUpdate",
-                      "../build/test/CMakeFiles/NightlyUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyUpdate",
-                "name": "NightlyUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Continuous",
-                      "../build/test/CMakeFiles/Continuous.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Continuous",
-                "name": "Continuous",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalCoverage",
-                      "../build/test/CMakeFiles/ExperimentalCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalCoverage",
-                "name": "ExperimentalCoverage",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalBuild",
-                      "../build/test/CMakeFiles/ExperimentalBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalBuild",
-                "name": "ExperimentalBuild",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlyConfigure",
-                      "../build/test/CMakeFiles/NightlyConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyConfigure",
-                "name": "NightlyConfigure",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalTest",
-                      "../build/test/CMakeFiles/ExperimentalTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalTest",
-                "name": "ExperimentalTest",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalMemCheck",
-                      "../build/test/CMakeFiles/ExperimentalMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalMemCheck",
-                "name": "ExperimentalMemCheck",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/Experimental",
-                      "../build/test/CMakeFiles/Experimental.rule"
-                    ]
-                  }
-                ],
-                "fullName": "Experimental",
-                "name": "Experimental",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/NightlySubmit",
-                      "../build/test/CMakeFiles/NightlySubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlySubmit",
-                "name": "NightlySubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ExperimentalSubmit",
-                      "../build/test/CMakeFiles/ExperimentalSubmit.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalSubmit",
-                "name": "ExperimentalSubmit",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousStart",
-                      "../build/test/CMakeFiles/ContinuousStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousStart",
-                "name": "ContinuousStart",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/dmitri/workspace/data/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/ContinuousUpdate",
-                      "../build/test/CMakeFiles/ContinuousUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousUpdate",
-                "name": "ContinuousUpdate",
-                "sourceDirectory": "/home/dmitri/workspace/data/test",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
               }
             ]
           },
           {
-            "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/src",
+            "name": "datastruct",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/src",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/datastruct"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-Wall -fprofile-arcs -ftest-coverage  ",
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "datastructures.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "datastruct",
+                "linkLanguageFlags": "-Wall -fprofile-arcs -ftest-coverage",
+                "linkLibraries": "-rdynamic ../libs/liblibs.a",
+                "linkerLanguage": "CXX",
+                "name": "datastruct",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/src",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
             "name": "gmock",
-            "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
             "targets": [
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock_main.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
@@ -1423,130 +463,130 @@
                 "fullName": "libgmock_main.a",
                 "linkerLanguage": "CXX",
                 "name": "gmock_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmock.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest_main.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest_main.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
                 "type": "STATIC_LIBRARY"
               }
             ]
           },
           {
-            "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build",
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build",
             "name": "googletest-distribution",
-            "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src",
             "targets": [
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock_main.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest_main.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/libgmock_main.a"
-                ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
-                    "includePath": [
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googlemock"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
-                      },
-                      {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
@@ -1561,59 +601,59 @@
                 "fullName": "libgmock_main.a",
                 "linkerLanguage": "CXX",
                 "name": "gmock_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googlemock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
                 "type": "STATIC_LIBRARY"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
-            "name": "gtest",
-            "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
-            "targets": [
+              },
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/libgmock.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
                     "language": "CXX",
                     "sources": [
-                      "src/gtest-all.cc"
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
                     ]
                   }
                 ],
-                "fullName": "libgtest.a",
+                "fullName": "libgmock.a",
                 "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
+                "name": "gmock",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googlemock",
                 "type": "STATIC_LIBRARY"
               },
               {
                 "artifacts": [
-                  "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest/libgtest_main.a"
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest_main.a"
                 ],
-                "buildDirectory": "/home/dmitri/workspace/data/build/googletest-build/googlemock/gtest",
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
                     "includePath": [
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest/include"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
                       },
                       {
-                        "path": "/home/dmitri/workspace/data/build/googletest-src/googletest"
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
                       }
                     ],
                     "isGenerated": false,
@@ -1626,7 +666,135 @@
                 "fullName": "libgtest_main.a",
                 "linkerLanguage": "CXX",
                 "name": "gtest_main",
-                "sourceDirectory": "/home/dmitri/workspace/data/build/googletest-src/googletest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+            "name": "gtest",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest_main.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest_main.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest/libgtest.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/googletest-build/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -O0 -Wall -fprofile-arcs -ftest-coverage    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers",
+                    "includePath": [
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest/include"
+                      },
+                      {
+                        "path": "/home/dmitri/workspace/datalib/build/googletest-src/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/build/googletest-src/googletest",
+                "type": "STATIC_LIBRARY"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/home/dmitri/workspace/datalib/build/libs",
+            "name": "libs",
+            "sourceDirectory": "/home/dmitri/workspace/datalib/libs",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/dmitri/workspace/datalib/build/libs/liblibs.a"
+                ],
+                "buildDirectory": "/home/dmitri/workspace/datalib/build/libs",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g  ",
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "structures.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "structures.h"
+                    ]
+                  }
+                ],
+                "fullName": "liblibs.a",
+                "linkerLanguage": "CXX",
+                "name": "libs",
+                "sourceDirectory": "/home/dmitri/workspace/datalib/libs",
                 "type": "STATIC_LIBRARY"
               }
             ]
@@ -1634,7 +802,7 @@
         ]
       }
     ],
-    "cookie": "0.8945246425132947",
+    "cookie": "0.3307131454544481",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
