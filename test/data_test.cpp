@@ -10,6 +10,7 @@ int main(int argc, char** argv)
     return RUN_ALL_TESTS();
 }
 
+// Testing array creation
 TEST(own_array, constructor)
 {
     own_array<int> myarray;
