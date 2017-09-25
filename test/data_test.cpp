@@ -127,6 +127,7 @@ TEST(own_array, getElement)
     ASSERT_TRUE(-1 == myarray.getElement(5, element)) << "Unexpected result querring element 5 from 1 element array";
 }
 
+// Testing array operations at scale
 TEST(own_array, dataConsistency)
 {
     own_array<long> myarray;
