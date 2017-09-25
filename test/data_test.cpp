@@ -63,6 +63,7 @@ TEST(own_array, addElement)
 
 }
 
+// remove element tests
 TEST(own_array, removeElement)
 {
     own_array<int> myarray;
