@@ -4,6 +4,7 @@
 #include <vector>
 #include <stdlib.h>
 
+// Main routine
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
