@@ -17,6 +17,7 @@ TEST(own_array, constructor)
     ASSERT_TRUE(0 == myarray.getSize());
 }
 
+// TEsting element addition
 TEST(own_array, addElement)
 {
     own_array<int> myarray;
