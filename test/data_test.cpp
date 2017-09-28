@@ -18,6 +18,7 @@ TEST(own_array, constructor)
 
 TEST(own_array, addElement)
 {
+    // Tony added a comment from prilepski-patch-2.
     own_array<int> myarray;
     long size = myarray.getSize();
     ASSERT_TRUE(0 == size) << "Array size is not 0 after creation";
