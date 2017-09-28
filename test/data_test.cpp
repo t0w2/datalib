@@ -22,7 +22,7 @@ TEST(own_array, constructor)
 // TEsting element addition
 TEST(own_array, addElement)
 {
-    // Tony updated a comment from prilepski-patch-2, the second time.
+    // Tony updated a comment from prilepski-patch-2, once again.
     own_array<int> myarray;
     long size = myarray.getSize();
     ASSERT_TRUE(0 == size) << "Array size is not 0 after creation";
