@@ -69,7 +69,7 @@ TEST(own_array, addElement)
 // remove element tests
 TEST(own_array, removeElement)
 {
-    // Tony updated comment from prilepski-patch-3, once again.
+    // Tony updated comment from prilepski-patch-3, the 3rd time.
     own_array<int> myarray;
 
     ASSERT_TRUE(0 == myarray.removeElement(0));
