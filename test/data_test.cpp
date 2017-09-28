@@ -4,12 +4,14 @@
 #include <vector>
 #include <stdlib.h>
 
+// Main routine
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
 
+// Testing array creation
 TEST(own_array, constructor)
 {
     // Tony added a comment from prilepski-patch-1.
@@ -17,6 +19,7 @@ TEST(own_array, constructor)
     ASSERT_TRUE(0 == myarray.getSize());
 }
 
+// TEsting element addition
 TEST(own_array, addElement)
 {
     own_array<int> myarray;
@@ -62,6 +65,7 @@ TEST(own_array, addElement)
 
 }
 
+// remove element tests
 TEST(own_array, removeElement)
 {
     own_array<int> myarray;
@@ -128,6 +132,7 @@ TEST(own_array, getElement)
     ASSERT_TRUE(-1 == myarray.getElement(5, element)) << "Unexpected result querring element 5 from 1 element array";
 }
 
+// Testing array operations at scale
 TEST(own_array, dataConsistency)
 {
     own_array<long> myarray;
