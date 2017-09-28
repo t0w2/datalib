@@ -12,6 +12,7 @@ int main(int argc, char** argv)
 
 TEST(own_array, constructor)
 {
+    // Tony added a comment from prilepski-patch-1.
     own_array<int> myarray;
     ASSERT_TRUE(0 == myarray.getSize());
 }
