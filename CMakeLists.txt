@@ -9,6 +9,7 @@ add_subdirectory(libs)
 add_subdirectory(src)
 add_subdirectory(test)
 
+# Tony added comment from prilepski-patch-1.
 #add_custom_command(TARGET test
 #                  POST_BUILD
 #                  COMMAND ${CMAKE_BINARY_DIR}/data_test)
