@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 // Testing array creation
 TEST(own_array, constructor)
 {
-    // Tony added a comment from prilepski-patch-1.
+    // Tony updated a comment from prilepski-patch-1, the 6th time.
     own_array<int> myarray;
     ASSERT_TRUE(0 == myarray.getSize());
 }
