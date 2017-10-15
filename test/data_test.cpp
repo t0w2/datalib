@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 // Main routine
+// TEmp change to trigger tests
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
