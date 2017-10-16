@@ -9,6 +9,7 @@
 // Change in branch 1
 // New change in branch 1 thatshould not be in branch1
 // another change from branch1
+// comment for the demo
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
