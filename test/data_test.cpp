@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 // Testing array creation
 TEST(own_array, constructor)
 {
-    // Tony updated a comment from prilepski-patch-1, the 6th time.
+    // Tony updated a comment from prilepski-patch-1, the 7th time.
     own_array<int> myarray;
     ASSERT_TRUE(0 == myarray.getSize());
 }
@@ -69,7 +69,7 @@ TEST(own_array, addElement)
 // remove element tests
 TEST(own_array, removeElement)
 {
-    // Tony updated comment from prilepski-patch-3, the 6th time.
+    // Tony updated comment from prilepski-patch-3, the 7th time.
     own_array<int> myarray;
 
     ASSERT_TRUE(0 == myarray.removeElement(0));
