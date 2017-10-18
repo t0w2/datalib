@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 // Testing array creation
 TEST(own_array, constructor)
 {
-    // Tony added a comment from prilepski-patch-1.
+    // Tony updated a comment from prilepski-patch-1, the 8th time.
     own_array<int> myarray;
     ASSERT_TRUE(0 == myarray.getSize());
 }
@@ -22,7 +22,7 @@ TEST(own_array, constructor)
 // TEsting element addition
 TEST(own_array, addElement)
 {
-    // Tony added a comment from prilepski-patch-2.
+    // Tony updated a comment from prilepski-patch-2, the 8th time.
     own_array<int> myarray;
     long size = myarray.getSize();
     ASSERT_TRUE(0 == size) << "Array size is not 0 after creation";
