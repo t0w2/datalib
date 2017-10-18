@@ -22,7 +22,7 @@ TEST(own_array, constructor)
 // TEsting element addition
 TEST(own_array, addElement)
 {
-    // Tony added a comment from prilepski-patch-2.
+    // Tony updated a comment from prilepski-patch-2, the 8th time.
     own_array<int> myarray;
     long size = myarray.getSize();
     ASSERT_TRUE(0 == size) << "Array size is not 0 after creation";
@@ -69,7 +69,7 @@ TEST(own_array, addElement)
 // remove element tests
 TEST(own_array, removeElement)
 {
-    // Tony updated comment from prilepski-patch-3, the 6th time.
+    // Tony updated comment from prilepski-patch-3, the 7th time.
     own_array<int> myarray;
 
     ASSERT_TRUE(0 == myarray.removeElement(0));
