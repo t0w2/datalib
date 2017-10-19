@@ -11,8 +11,10 @@ node {
     }
 
     stage('Customized_Pull_Request_Merge') {
-        withCredentials([usernameColonPassword(credentialsId: 'Github', variable: 'credentials')]) {
-            sh("curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge")
+        if (env.CHANGE_ID != null) {
+            withCredentials([usernameColonPassword(credentialsId: 'Github', variable: 'credentials')]) {
+                sh("curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge")
+            }
         }
     }
 }
