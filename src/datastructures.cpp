@@ -1,6 +1,6 @@
 #include "../libs/structures.h"
 
-// Comments added from t0w2-patch-1 for the 1st time.
+// Comments added from t0w2-patch-1 for the 2nd time.
 int main(int argc, char* argv[])
 {
     own_array<int> myarray;
