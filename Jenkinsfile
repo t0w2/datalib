@@ -17,4 +17,14 @@ node {
             }
         }
     }
+    
+    stage('Rebase') {
+        if (env.CHANGE_ID) {
+            TARGET_BRANCH = sh(
+                script: 'curl https://api.github.com/repos/t0w2/datalib/pulls/24 2> /dev/null | python -c "import sys, json; print json.load(sys.stdin)[\'base\'][\'ref\']"',
+                returnStdout: true
+            ).trim()
+            echo "TARGET_BRANCH: ${TARGET_BRANCH}"
+        }
+    }
 }
