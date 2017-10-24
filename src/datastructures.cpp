@@ -3,7 +3,7 @@
 // Comments added from t0w2-patch-1 for the 4th time.
 int main(int argc, char* argv[])
 {
-    // Comment added from dev/wangw5/patch1 for the 1st time.
+    // Comment updated from dev/wangw5/patch1 for the 2nd time.
     own_array<int> myarray;
     myarray.getSize();
 
