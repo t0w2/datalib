@@ -21,7 +21,7 @@ class own_array
 
 template <class T>
 own_array<T>::own_array(){
-    arrayStructure = nullptr;
+    arrayStructure = NULL;
     size = 0;
 }
 
