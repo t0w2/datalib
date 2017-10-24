@@ -28,7 +28,7 @@ node {
                 script: "curl https://api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID} 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['base']['ref']\"",
                 returnStdout: true
             ).trim()
-            echo "Pull Request ${CHANGE_ID} has SOURCE_BRANCH: ${SOURCE_BRANCH} and TARGET_BRANCH: ${TARGET_BRANCH}."
+            echo "Pull Request ${CHANGE_ID} merged ${SOURCE_BRANCH} to ${TARGET_BRANCH}."
             echo "Go to rebase from ${TARGET_BRANCH} back to ${SOURCE_BRANCH}."
             build job: 'git_branch_merge_pipeline', parameters: [string(name: 'SOURCE_BRANCH', value: "${TARGET_BRANCH}"), string(name: 'TARGET_BRANCH', value: "${SOURCE_BRANCH}")], wait: false
         }
