@@ -139,7 +139,7 @@ template <class T>
 long own_array<T>::clear(){
     if (arrayStructure){
         delete []  arrayStructure;
-        arrayStructure = nullptr;
+        arrayStructure = NULL;
     }
     size = 0;
     return 0;
