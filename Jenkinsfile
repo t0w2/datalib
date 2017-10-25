@@ -1,4 +1,26 @@
 node {
+    properties(
+        [
+            pipelineTriggers([cron('H/5 * * * *')]),
+        ]
+    )
+
+    stage('Status Checking') {
+        if (env.CHANGE_ID) {
+            SHA = sh(
+                script: "curl https://api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID} 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['head']['sha']\"",
+                returnStdout: true
+            ).trim()
+            STATUS = sh(
+                script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['state']\"",
+                returnStdout: true
+            ).trim()
+            if (STATUS != "success") {
+                error("Status Checking returns: ${STATUS}")
+            }
+        }
+    }
+
     // Mark the code checkout 'stage'....
     stage('Checkout') {
         // Checkout code from repository
