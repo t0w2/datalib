@@ -1,4 +1,10 @@
 node {
+    properties(
+        [
+            pipelineTriggers([cron('H/5 * * * *')]),
+        ]
+    )
+
     stage('Status Checking') {
         if (env.CHANGE_ID) {
             SHA = sh(
