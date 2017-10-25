@@ -13,7 +13,14 @@ node {
     stage('Customized_Pull_Request_Merge') {
         if (env.CHANGE_ID) {
             withCredentials([usernameColonPassword(credentialsId: 'Github', variable: 'credentials')]) {
-                sh("curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge")
+                MERGE_RESULT = sh(
+                    script: "curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['message']\"",
+                    returnStdout: true
+                ).trim()
+                
+                if (MERGE_RESULT == "At least one approved review is required by reviewers with write access.") {
+                    currentBuild.result = 'FAILURE'
+                }
             }
         }
     }
