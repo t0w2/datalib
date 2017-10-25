@@ -10,7 +10,7 @@ node {
                 returnStdout: true
             ).trim()
             if (STATUS != "success") {
-                abort("Status Checking returns: ${STATUS}")
+                throw new hudson.AbortException("Status Checking returns: ${STATUS}")
             }
         }
     }
