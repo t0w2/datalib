@@ -17,8 +17,8 @@ node {
                     script: "curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['message']\"",
                     returnStdout: true
                 ).trim()
-                
-                if (MERGE_RESULT == "At least one approved review is required by reviewers with write access.") {
+                echo "Merge Result: ${MERGE_RESULT}"
+                if (MERGE_RESULT != "Pull Request successfully merged") {
                     currentBuild.result = 'FAILURE'
                 }
             }
