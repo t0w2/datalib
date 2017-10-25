@@ -16,7 +16,8 @@ node {
                 returnStdout: true
             ).trim()
             if (STATUS != "success") {
-                error("Status Checking returns: ${STATUS}")
+                currentBuild.result = 'NOT_BUILT'
+                error("Status Checking returns: ${STATUS}. Do not build until Status Checking returns 'success'")
             }
         }
     }
