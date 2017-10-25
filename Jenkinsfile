@@ -18,7 +18,7 @@ node {
                     returnStdout: true
                 ).trim()
                 
-                if (MERGE_RESULT = "At least one approved review is required by reviewers with write access.") {
+                if (MERGE_RESULT == "At least one approved review is required by reviewers with write access.") {
                     currentBuild.result = 'FAILURE'
                 }
             }
