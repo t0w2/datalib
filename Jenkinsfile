@@ -14,7 +14,7 @@ node {
         if (env.CHANGE_ID) {
             withCredentials([usernameColonPassword(credentialsId: 'Github', variable: 'credentials')]) {
                 MERGE_RESULT = sh(
-                    script: "curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['message']\""
+                    script: "curl -X PUT -d '{\"commit_title\": \"Merge pull request\"}'  https://${credentials}@api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID}/merge 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['message']\"",
                     returnStdout: true
                 ).trim()
                 
