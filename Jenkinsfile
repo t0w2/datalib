@@ -19,7 +19,7 @@ node {
                 ).trim()
                 echo "Merge Result: ${MERGE_RESULT}"
                 if (MERGE_RESULT != "Pull Request successfully merged") {
-                    currentBuild.result = 'FAILURE'
+                    error(MERGE_RESULT)
                 }
             }
         }
