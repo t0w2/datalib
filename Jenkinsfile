@@ -16,7 +16,7 @@ node {
             //    returnStdout: true
             //).trim()
             STATUS = sh(
-                script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; checks = json.load(sys.stdin); num = len(checks['statuses']); print ', '.join([checks['statuses'][i]['context'] + ' is ' + checks['statuses'][i]['state'] for i in range(num) if (checks['statuses'][i]['state'] != 'success' and checks['statuses'][i]['context'] != 'continuous-integration/jenkins/pr-merge')])\"",
+                script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; checks = json.load(sys.stdin); num = len(checks['statuses']); print 'No checks found.' if (num <= 1) else ''; print ', '.join([checks['statuses'][i]['context'] + ' is ' + checks['statuses'][i]['state'] for i in range(num) if not (checks['statuses'][i]['state'] == 'success' or checks['statuses'][i]['context'] == 'continuous-integration/jenkins/pr-merge')])\"",
                 returnStdout: true
             ).trim()
             if (STATUS != "") {
