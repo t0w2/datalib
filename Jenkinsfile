@@ -11,11 +11,15 @@ node {
                 script: "curl https://api.github.com/repos/t0w2/datalib/pulls/${CHANGE_ID} 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['head']['sha']\"",
                 returnStdout: true
             ).trim()
+            //STATUS = sh(
+            //    script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['state']\"",
+            //    returnStdout: true
+            //).trim()
             STATUS = sh(
-                script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; print json.load(sys.stdin)['state']\"",
+                script: "curl https://api.github.com/repos/t0w2/datalib/commits/${SHA}/status 2> /dev/null | python -c \"import sys, json; checks = json.load(sys.stdin); num = len(checks['statuses']); print ', '.join([checks['statuses'][i]['context'] + ' is ' + checks['statuses'][i]['state'] for i in range(num) if (checks['statuses'][i]['state'] != 'success' and checks['statuses'][i]['context'] != 'continuous-integration/jenkins/pr-merge')])\"",
                 returnStdout: true
             ).trim()
-            if (STATUS != "success") {
+            if (STATUS != "") {
                 currentBuild.result = 'NOT_BUILT'
                 error("Status Checking returns: ${STATUS}. Do not build until Status Checking returns 'success'")
             }
